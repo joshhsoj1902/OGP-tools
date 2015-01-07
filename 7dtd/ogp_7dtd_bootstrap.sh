@@ -1,4 +1,11 @@
 #!/bin/bash
+
+# Based on r204 of alloc's bootstrap script found here:
+# https://7dtd.illy.bz/browser/bootstrapper/bootstrap.sh
+
+# Script modified to support a user being passed into the script and support
+# a home directory passed in.
+
 VERSION=5
 
 if [ `id -u` -ne 0 ]; then
