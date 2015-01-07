@@ -1,0 +1,16 @@
+<game_config>
+  <game_key>starbound_linux64</game_key>
+  <protocol>gameq</protocol>
+  <gameq_query_name>starbound</gameq_query_name>
+  <installer>steamcmd</installer>
+  <game_name>Starbound</game_name>
+  <server_exec_name>starbound_server</server_exec_name>
+  <exe_location>linux64</exe_location>
+  <mods>
+    <mod key="starbound">
+      <name>none</name>
+      <installer_name>211820</installer_name>
+    </mod>
+  </mods>
+</game_config>
+
