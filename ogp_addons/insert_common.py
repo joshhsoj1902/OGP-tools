@@ -32,9 +32,3 @@ def insert_addon(addon_name,url,path,addon_type,game_key,post_script):
 
   cur.execute("INSERT INTO ogp_addons (name,url,path,addon_type,home_cfg_id,post_script) VALUES (%s,%s,%s,%s,%s,%s)",(addon_name,url,path,addon_type,home_cfg_id,post_script));
 
-
-  # print all the first cell of all the rows
-  for row in cur.fetchall() :
-      print row[0]
-
-insert_addon("Testing addon","www.google.ca","/tmp/","plugin","warsow_win32","touch /tmp/installed.tmp;");
