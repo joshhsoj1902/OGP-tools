@@ -1,0 +1,82 @@
+<game_config>
+  <game_key>7daystodie_linux_maint</game_key>  
+  <game_name>7 Days to Die MAINT</game_name>
+  <server_exec_name>7dtd_launcher.sh</server_exec_name>
+  <cli_template>%MAP%</cli_template>
+  <cli_params>
+    <cli_param id="MAP" cli_string="" />
+  </cli_params>
+  <maps_location>instances</maps_location>
+  <console_log>current_output_log.txt</console_log>
+  <mods>
+    <mod key="7daystodie_linux_maint">
+      <name>none</name>
+    </mod>
+  </mods>
+  <!--<replace_texts>
+    <text key="port">
+      <default>property</default>
+      <var>ServerPort</var>
+      <filepath>serverconfig.xml</filepath>
+      <options>tagValueByName</options>
+    </text>
+    <text key="max_players">
+      <default>property</default>
+      <var>ServerMaxPlayerCount</var>
+      <filepath>serverconfig.xml</filepath>
+      <options>tagValueByName</options>
+    </text>
+    <text key="control_password">
+      <default>property</default>
+      <var>ControlPanelPassword</var>
+      <filepath>serverconfig.xml</filepath>
+      <options>tagValueByName</options>
+    </text>
+    <text key="home_name">
+      <default>property</default>
+      <var>ServerName</var>
+      <filepath>serverconfig.xml</filepath>
+      <options>tagValueByName</options>
+    </text>
+    <text key="home_name">
+      <default>property</default>
+      <var>GameName</var>
+      <filepath>serverconfig.xml</filepath>
+      <options>tagValueByName</options>
+    </text>
+    <text key="map">
+      <default>property</default>
+      <var>GameWorld</var>
+      <filepath>serverconfig.xml</filepath>
+      <options>tagValueByName</options>
+    </text>
+    <text key="query_port">
+      <default>property</default>
+      <var>TelnetPort</var>
+      <filepath>serverconfig.xml</filepath>
+      <options>tagValueByName</options>
+    </text>
+  </replace_texts>-->
+  <!--<custom_fields>
+    <field key="ControlPanelEnabled" type="select">
+      <option value="true">Yes</option>
+      <option value="false">No</option>
+      <default>property</default>
+      <default_value>false</default_value>
+      <var>ControlPanelEnabled</var>
+      <filepath>serverconfig.xml</filepath>
+      <options>tagValueByName</options>
+      <desc>Enable the Web Control Panel.</desc>
+    </field>
+    <field key="TelnetEnabled" type="select">
+      <option value="true">Yes</option>
+      <option value="false">No</option>
+      <default>property</default>
+      <default_value>true</default_value>
+      <var>TelnetEnabled</var>
+      <filepath>serverconfig.xml</filepath>
+      <options>tagValueByName</options>
+      <desc>Enable local telnet connection. By disabling it OGP will be unable to get the server status.</desc>
+    </field>
+  </custom_fields>-->
+</game_config>
