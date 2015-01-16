@@ -1,0 +1,11 @@
+More information about this plugin can be found here: https://forums.alliedmods.net/showthread.php?t=134032
+
+This is built using:
+
+Metamod 1.10-dev
+Sourcemod 1.6-dev
+
+It is inteneded to run on Linux (mainly Debian).
+
+The build script I used can be found in ../../l4d2/build_left4downtown.sh  It will do everything I needed to do
+to get it to compile.
