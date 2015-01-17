@@ -67,6 +67,8 @@ cd $SCRIPTSDIR/GeoLiteCity/
 chmod +x install_binary.sh 
 ./install_binary.sh
 
+rm -rf $WEBROOT/updater
+
 echo "========================="
 echo "Load /stats/ in a browser"
 echo "user: admin"
