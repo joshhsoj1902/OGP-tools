@@ -19,6 +19,7 @@ mkdir -p $WEBROOT;
 cp -rp web/* $WEBROOT;
 
 mkdir -p $SCRIPTSDIR;
+chown ogpuser:users $SCRIPTSDIR
 cp -rp scripts/* $SCRIPTSDIR;
 
 
