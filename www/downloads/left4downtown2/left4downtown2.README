@@ -7,5 +7,5 @@ Sourcemod 1.6-dev
 
 It is inteneded to run on Linux (mainly Debian).
 
-The build script I used can be found in ../../l4d2/build_left4downtown.sh  It will do everything I needed to do
+The build script I used can be found in ../../../l4d2/build_left4downtown2.sh  It will do everything I needed to do
 to get it to compile.

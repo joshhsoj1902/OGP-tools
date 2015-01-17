@@ -41,3 +41,4 @@ cp left4downtown2/scripting/include/* addons/sourcemod/scripting/include;
 cp left4downtown2/gamedata/left4downtown.l4d2.txt addons/sourcemod/gamedata;
 
 tar -zcvf ../left4downtown2.tar.gz addons;
+tar -zcvf ../src.tar.gz left4downtown2;
