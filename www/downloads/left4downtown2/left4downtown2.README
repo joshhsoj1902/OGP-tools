@@ -5,6 +5,12 @@ This is built using:
 Metamod 1.10-dev
 Sourcemod 1.6-dev
 
+These github are the repos used used:
+	https://github.com/Attano/Left4Downtown2.git
+	https://github.com/alliedmodders/sourcemod.git
+	https://github.com/alliedmodders/metamod-source
+	https://github.com/alliedmodders/hl2sdk.git
+
 It is inteneded to run on Linux (mainly Debian).
 
 The build script I used can be found in ../../../l4d2/build_left4downtown2.sh  It will do everything I needed to do
