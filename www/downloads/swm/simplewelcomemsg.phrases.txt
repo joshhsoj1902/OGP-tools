@@ -1,0 +1,157 @@
+"Phrases"
+{
+	//Chat Messages
+	//Color list: http://forums.alliedmods.net/showthread.php?t=96831
+	"WelcomeMsg1"
+	{
+		"#format"	"{1:N}"
+		"en"		"{green}Hello {olive}{1}! {lightgreen}Don't be shy! Say {green}Hello {lightgreen}to other players."
+	}
+	
+	"WelcomeMsg2"
+	{
+		"en"		""
+	}
+	
+	"WelcomeMsg3"
+	{
+		"en"		"{green}To change Characters, use {lightgreen}!sm_csm"
+	}
+	
+	"WelcomeMsg4"
+	{
+		"en"		""
+	}
+	
+	"WelcomeMsg5"
+	{
+		"en"		""
+	}
+	
+	"WelcomeMsg6"
+	{
+		"en"		""
+	}
+	
+	"WelcomeMsg7"
+	{
+		"en"		""
+	}
+	
+	"WelcomeMsg8"
+	{
+		"en"		""
+	}
+	
+	//Panel Messages
+	"PanelTitle"
+	{
+		"en"		"Welcome!"
+	}
+	
+	"PanelClose"
+	{
+		"en"		"0. Close"
+	}
+	
+	"PanelLine1"
+	{
+		"en"		"Welcome on our server! GL&HF!"
+	}
+	
+	"PanelLine2"
+	{
+		"en"		""
+	}
+	
+	"PanelLine3"
+	{
+		"en"		""
+	}
+	
+	"PanelLine4"
+	{
+		"en"		""
+	}
+	
+	"PanelLine5"
+	{
+		"en"		""
+	}
+	
+	"PanelLine6"
+	{
+		"en"		""
+	}
+	
+	"PanelLine7"
+	{
+		"en"		""
+	}
+	
+	"PanelLine8"
+	{
+		"en"		""
+	}
+	
+	"PanelLine9"
+	{
+		"en"		""
+	}
+	
+	"PanelLine10"
+	{
+		"en"		""
+	}
+	
+	"PanelLine11"
+	{
+		"en"		""
+	}
+	
+	"PanelLine12"
+	{
+		"en"		""
+	}
+	
+	"PanelLine13"
+	{
+		"en"		""
+	}
+	
+	"PanelLine14"
+	{
+		"en"		""
+	}
+	
+	"PanelLine15"
+	{
+		"en"		""
+	}
+	
+	"PanelLine16"
+	{
+		"en"		""
+	}
+	//Hint Message
+	"HintMessage"
+	{
+		"en"		"Welcome on our server! GL and HF!"
+	}
+	
+	//Mod Detection
+	"Insurgency"
+	{
+		"en"		"Set the maximum number of lines for Insurgency mod."
+	}
+	
+	"L4D"
+	{
+		"en"		"Set the maximum number of lines for Left 4 Dead."
+	}
+		
+	"Other"
+	{
+		"en"		"Set the maximum number of lines of."
+	}
+}
