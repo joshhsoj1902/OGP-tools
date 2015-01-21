@@ -22,11 +22,11 @@ post_bash="""
 echo "Left4Downtown2 Installed"
 
 cd %home_path%/left4dead2/addons/sourcemod/plugins
-wget -N -O l4dunreservelobby.smx https://forums.alliedmods.net/attachment.php?attachmentid=56932&d=1262977327
+wget -N -O 'l4dunreservelobby.smx https://forums.alliedmods.net/attachment.php?attachmentid=56932&d=1262977327'
 echo "Remove Lobby Reservation Installed"
 
 cd %home_path%/left4dead2/addons/sourcemod/scripting
-wget -N https://forums.alliedmods.net/attachment.php?attachmentid=54217&d=1259334888
+wget -N 'https://forums.alliedmods.net/attachment.php?attachmentid=54217&d=1259334888'
 unzip -o 'attachment.php?attachmentid=54217&d=1259334888'
 rm -f bebop.smx
 ./compile.sh bebop.sp
@@ -46,6 +46,15 @@ wget -N http://localhost/downloads/csm/survivor_chat_select.smx
 cd %home_path%/left4dead2/cfg/sourcemod
 wget -N http://localhost/downloads/csm/l4dscs.cfg
 echo "Survivor Chat Select Installed"
+
+cd %home_path%/left4dead2/cfg
+echo "" >> server.cfg
+echo "//8 Player Co-op" >> server.cfg
+echo "sv_visiblemaxplayers 8" >> server.cfg
+echo "l4d_infected_limit 20" >> server.cfg
+echo "sv_removehumanlimit 1" >> server.cfg
+echo "sv_force_unreserved 1" >> server.cfg
+
 """
 
 insert_common.insert_addon(
