@@ -22,6 +22,8 @@ mkdir -p $SCRIPTSDIR;
 chown ogpuser:users $SCRIPTSDIR
 cp -rp scripts/* $SCRIPTSDIR;
 
+#Need To test/set this up!!
+#perl -MCPAN -e 'install Geo::IP::PurePerl'
 
 echo "========================="
 echo "Creating Database"
@@ -31,7 +33,7 @@ mysql --defaults-extra-file=/etc/mysql/debian.cnf <<EOF
 CREATE DATABASE $DB_NAME 
 CHARACTER SET = utf8mb4 
 COLLATE = utf8mb4_unicode_ci;
-GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER,CREATE TEMP
 ON $DB_NAME.*
 TO $DB_USER@localhost
 IDENTIFIED BY '$DB_PASS';
