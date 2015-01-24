@@ -20,6 +20,14 @@ rm -f %home_path%/left4dead2/addons/sourcemod/plugins/superlogs-nucleardawn.smx
 rm -f %home_path%/left4dead2/addons/sourcemod/plugins/superlogs-pvkii.smx
 rm -f %home_path%/left4dead2/addons/sourcemod/plugins/superlogs-tf2.smx
 rm -f %home_path%/left4dead2/addons/sourcemod/plugins/superlogs-zps.smx
+
+
+cd %home_path%/left4dead2/cfg
+echo "" >> server.cfg
+echo "//8 Player Co-op" >> server.cfg
+echo "log on" >> server.cfg
+echo "logaddress_add localhost:27500" >> server.cfg
+
 """
 
 insert_common.insert_addon(
