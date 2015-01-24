@@ -1,0 +1,7 @@
+medepotsystem"
+	{
+		"cstrike"	"1"
+		//"hl1"		"1"
+		//"hl1_hd"	"1"
+		"hl2"		"1"
+	}
