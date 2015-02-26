@@ -1,0 +1,53 @@
+<game_config>
+  <game_key>terraria_tdsm_linux</game_key>
+  <protocol>gameq</protocol>
+  <gameq_query_name>terraria</gameq_query_name>
+  <game_name>Terraria TDSM</game_name>
+  <server_exec_name>tdsm.exe</server_exec_name>
+  <cli_template>;mono ./tdsm.exe %CONFIG% %PORT% %PLAYERS% %PASS% %WORLD% %BANLIST% %AUTOCREATE% %WORLDNAME%</cli_template>
+  <cli_params>
+   <cli_param id="PORT" cli_string="-port" options="s" />
+   <cli_param id="PLAYERS" cli_string="-players" options="s" />
+   <cli_param id="MAP" cli_string="-world" options="s" />
+  </cli_params>
+  <!--<maps_location>Worlds/</maps_location>-->
+  <console_log>Data/server.log</console_log>
+  <max_user_amount>8</max_user_amount>
+  <mods>
+    <mod key="none">
+      <name>none</name>
+    </mod>
+  </mods>
+  <server_params>
+    <param id="CONFIG" key="-config" type="text">
+      <option>ns</option>
+      <caption>Config File</caption>
+      <desc>Location of custom Config file</desc>
+    </param>
+    <param id="PASS" key="-pass" type="text">
+      <caption>Password</caption>
+      <desc>Password for the server</desc>
+    </param>
+    <param id="WORLD" key="-world" type="text">
+      <default>Worlds/world.wld</default>
+      <caption>World file</caption>
+      <desc>Which world file to use</desc>
+    </param>
+
+    <param id="BANLIST" key="-banlist" type="text">
+      <default>banlist.txt</default>
+      <caption>Banlist</caption>
+      <desc>Path to Banlist</desc>
+    </param>
+    <param id="AUTOCREATE" key="-autocreate" type="text">
+      <default>2</default>
+      <caption>Autocreate world</caption>
+      <desc>Autocreate world if it doesn't exist [1(small), 2(medium), and 3(large)]</desc>
+    </param>
+    <param id="WORLDNAME" key="-worldname" type="text">
+      <default>world</default>
+      <caption>Name for autocreated world</caption>
+      <desc>If a world is going to be autocreated, use this name</desc>
+    </param>
+  </server_params>
+</game_config>
