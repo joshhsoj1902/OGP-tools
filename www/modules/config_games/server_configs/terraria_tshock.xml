@@ -29,11 +29,11 @@
       <caption>Password</caption>
       <desc>Password for the server</desc>
     </param>
-    <param id="WORLD" key="-world" type="text">
+<!--    <param id="WORLD" key="-world" type="text">
       <default>Worlds/world.wld</default>
       <caption>World file</caption>
       <desc>Which world file to use</desc>
-    </param>
+    </param>-->
 
     <param id="BANLIST" key="-banlist" type="text">
       <default>banlist.txt</default>
