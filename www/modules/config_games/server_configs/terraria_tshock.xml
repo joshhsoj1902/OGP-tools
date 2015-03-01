@@ -4,14 +4,15 @@
   <gameq_query_name>terraria</gameq_query_name>-->
   <game_name>Terraria TShock</game_name>
   <server_exec_name>TerrariaServer.exe</server_exec_name>
-  <cli_template>;mono ./TerrariaServer.exe %CONFIG% %PORT% %PLAYERS% %PASS% %WORLD% %BANLIST% %AUTOCREATE% %WORLDNAME%</cli_template>
+  <cli_template>;mono ./TerrariaServer.exe %CONFIG% %PORT% %PLAYERS% %PASS% %MAP% %BANLIST% %AUTOCREATE% %WORLDNAME%</cli_template>
+  <!--<cli_template>;mono ./TerrariaServer.exe %CONFIG% %PORT% %PLAYERS% %PASS% %WORLD% %BANLIST% %AUTOCREATE% %WORLDNAME%</cli_template>-->
   <cli_params>
    <cli_param id="PORT" cli_string="-port" options="s" />
    <cli_param id="PLAYERS" cli_string="-players" options="s" />
    <cli_param id="MAP" cli_string="-world" options="s" />
   </cli_params>
-  <!--<maps_location>Worlds/</maps_location>-->
-  <console_log>Data/server.log</console_log>
+  <maps_location>Worlds/</maps_location>
+  <console_log>ServerLog.txt</console_log>
   <max_user_amount>8</max_user_amount>
   <mods>
     <mod key="none">
