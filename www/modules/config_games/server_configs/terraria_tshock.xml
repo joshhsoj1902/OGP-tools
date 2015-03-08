@@ -1,25 +1,66 @@
 <game_config>
-  <game_key>terraria_tdsm_linux</game_key>
-  <!--<protocol>gameq</protocol>
-  <gameq_query_name>terraria</gameq_query_name>-->
+  <game_key>terraria_tshock_linux</game_key>
+  <protocol>gameq</protocol>
+  <gameq_query_name>terraria</gameq_query_name>
   <game_name>Terraria TShock</game_name>
-  <server_exec_name>TerrariaServer.exe</server_exec_name>
-  <cli_template>;mono ./TerrariaServer.exe %CONFIG% %PORT% %PLAYERS% %PASS% %MAP% %BANLIST% %AUTOCREATE% %WORLDNAME%</cli_template>
-  <!--<cli_template>;mono ./TerrariaServer.exe %CONFIG% %PORT% %PLAYERS% %PASS% %WORLD% %BANLIST% %AUTOCREATE% %WORLDNAME%</cli_template>-->
+  <!--<server_exec_name>TerrariaServer.exe</server_exec_name>-->
+  <server_exec_name>terraria_tshock_launcher.sh</server_exec_name>
+  <query_port type="add">101</query_port>
+  <cli_template>%CONFIG% %PORT% %PLAYERS% %PASS% %WORLD% %BANLIST% %AUTOCREATE%</cli_template>
   <cli_params>
    <cli_param id="PORT" cli_string="-port" options="s" />
    <cli_param id="PLAYERS" cli_string="-players" options="s" />
-   <cli_param id="MAP" cli_string="-world" options="s" />
   </cli_params>
   <maps_location>Worlds/</maps_location>
   <console_log>ServerLog.txt</console_log>
   <max_user_amount>8</max_user_amount>
+  <!--<control_protocol>rcon</control_protocol>-->
   <mods>
     <mod key="none">
       <name>none</name>
     </mod>
   </mods>
-  <server_params>
+  <replace_texts>
+    <text key="control_password">
+      <default>("RconPassword"\s*:\s*")(.*)(",)</default>
+      <var>"RconPassword": "%key%",</var>
+      <options>key-regex</options>
+      <filepath>tshock/config.json</filepath>
+    </text>
+    <text key="home_name">
+      <default>("ServerName"\s*:\s*")(.*)(",)</default>
+      <var>"ServerName": "%key%",</var>
+      <filepath>tshock/config.json</filepath>
+      <options>key-regex</options>
+    </text>
+    <text key="port">
+      <default>("ServerPort"\s*:\s*)(.*)(,)</default>
+      <var>"ServerPort": %key%,</var>
+      <filepath>tshock/config.json</filepath>
+      <options>key-regex</options>
+    </text>
+    <!--Rcon not actuallly implemented-->
+    <text key="port">
+      <default>("RconPort"\s*:\s*)(.*)(,)</default>
+      <var>"RconPort": %key%,</var>
+      <filepath>tshock/config.json</filepath>
+      <options>key-regex</options>
+    </text>
+
+    <text key="true">
+      <default>("RestApiEnabled"\s*:\s*)(.*)(,)</default>
+      <var>"RestApiEnabled": true,</var>
+      <filepath>tshock/config.json</filepath>
+      <options>key-regex</options>
+    </text>
+    <text key="query_port">
+      <default>("RestApiPort"\s*:\s*)(.*)(,)</default>
+      <var>"RestApiPort": %key%,</var>
+      <filepath>tshock/config.json</filepath>
+      <options>key-regex</options>
+    </text>
+  </replace_texts>
+    <server_params>
     <param id="CONFIG" key="-config" type="text">
       <option>ns</option>
       <caption>Config File</caption>
@@ -29,26 +70,58 @@
       <caption>Password</caption>
       <desc>Password for the server</desc>
     </param>
-<!--    <param id="WORLD" key="-world" type="text">
+    <param id="WORLD" key="-world" type="text">
       <default>Worlds/world.wld</default>
       <caption>World file</caption>
       <desc>Which world file to use</desc>
+    </param>
+    <!--<param id="WORLDPATH" key="-worldpath" type="text">
+      <default>Worlds/</default>
+      <caption>Worlds Folder</caption>
+      <desc>Path to worlds folder</desc>
     </param>-->
+
 
     <param id="BANLIST" key="-banlist" type="text">
       <default>banlist.txt</default>
       <caption>Banlist</caption>
       <desc>Path to Banlist</desc>
     </param>
-    <param id="AUTOCREATE" key="-autocreate" type="text">
+    <param id="AUTOCREATE" key="-autocreate" type="select">
+      <option value="1">Small</option>
+      <option value="2">Medium</option>
+      <option value="3">Large</option>
       <default>2</default>
-      <caption>Autocreate world</caption>
-      <desc>Autocreate world if it doesn't exist [1(small), 2(medium), and 3(large)]</desc>
+      <caption>Autocreate world size</caption>
+      <desc>Autocreate world size</desc>
     </param>
-    <param id="WORLDNAME" key="-worldname" type="text">
-      <default>world</default>
+    <!--<param id="WORLDNAME" key="-worldname" type="text">
+      <default>world.wld</default>
       <caption>Name for autocreated world</caption>
       <desc>If a world is going to be autocreated, use this name</desc>
-    </param>
+    </param>-->
   </server_params>
+  <custom_fields>
+    <field key="SpawnProtection" type ="select">
+      <option value="false">False</option>
+      <option value="true">True</option>
+      <default>("SpawnProtection"\s*:\s*)(.*)(,)</default>
+      <default_value>false</default_value>
+      <var>"SpawnProtection": %key%,</var>
+      <filepath>tshock/config.json</filepath>
+      <options>key-regex</options>
+      <desc>Should Spawn be protected</desc>
+    </field>
+    <field key="DisableTombstones" type ="select">
+      <option value="false">False</option>
+      <option value="true">True</option>
+      <default>("DisableTombstones"\s*:\s*)(.*)(,)</default>
+      <default_value>true</default_value>
+      <var>"DisableTombstones": %key%,</var>
+      <filepath>tshock/config.json</filepath>
+      <options>key-regex</options>
+      <desc>Should tombstones be dropped when players die</desc>
+    </field>
+
+  </custom_fields>
 </game_config>
