@@ -28,7 +28,7 @@ git clone https://github.com/alliedmodders/metamod-source --branch 1.10-dev --si
 git clone https://github.com/alliedmodders/hl2sdk.git --branch l4d2 --single-branch hl2sdk-l4d2;
 
 mkdir -p srcds/left4dead2/bin;
-cp -R /home/ogpuser/OGP_User_Files/L4D2/bin/* srcds/left4dead2/bin/
+cp -R /home/ogpuser/OGP_User_Files/m_l4d2/bin/* srcds/left4dead2/bin/
 
 cd ../left4downtown2;
 
