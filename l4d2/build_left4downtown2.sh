@@ -1,5 +1,5 @@
 
-apt-get install make g++ libc6-dev-i386 gcc-multilib;
+apt-get -y install make g++ libc6-dev-i386 gcc-multilib;
 
 ln -s /usr/include/asm-generic /usr/include/asm;
 
@@ -32,7 +32,7 @@ cp -R /home/ogpuser/OGP_User_Files/L4D2/bin/* srcds/left4dead2/bin/
 
 cd ../left4downtown2;
 
-make;
+make playerslots;
 
 cd ../;
 
