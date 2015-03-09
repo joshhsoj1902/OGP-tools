@@ -61,6 +61,12 @@
     </text>
   </replace_texts>
     <server_params>
+
+    <param id="WORLD" key="-world" type="text">
+      <default>Worlds/world.wld</default>
+      <caption>World file</caption>
+      <desc>Which world file to use [Available Maps lists world names, just add '.wld']</desc>
+    </param>
     <param id="CONFIG" key="-config" type="text">
       <option>ns</option>
       <caption>Config File</caption>
@@ -69,11 +75,6 @@
     <param id="PASS" key="-pass" type="text">
       <caption>Password</caption>
       <desc>Password for the server</desc>
-    </param>
-    <param id="WORLD" key="-world" type="text">
-      <default>Worlds/world.wld</default>
-      <caption>World file</caption>
-      <desc>Which world file to use</desc>
     </param>
     <!--<param id="WORLDPATH" key="-worldpath" type="text">
       <default>Worlds/</default>
