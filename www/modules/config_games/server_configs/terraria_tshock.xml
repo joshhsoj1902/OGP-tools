@@ -103,7 +103,7 @@
     </param>-->
   </server_params>
   <custom_fields>
-    <field key="SpawnProtection" type ="select">
+    <field key="SpawnProtection" type="select">
       <option value="false">False</option>
       <option value="true">True</option>
       <default>("SpawnProtection"\s*:\s*)(.*)(,)</default>
@@ -113,7 +113,7 @@
       <options>key-regex</options>
       <desc>Should Spawn be protected</desc>
     </field>
-    <field key="DisableTombstones" type ="select">
+    <field key="DisableTombstones" type="select">
       <option value="false">False</option>
       <option value="true">True</option>
       <default>("DisableTombstones"\s*:\s*)(.*)(,)</default>
