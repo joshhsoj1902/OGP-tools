@@ -1,3 +1,4 @@
+#!/bin/bash
 
 apt-get -y install make g++ libc6-dev-i386 gcc-multilib;
 
@@ -27,6 +28,7 @@ git clone https://github.com/alliedmodders/sourcemod.git --branch 1.6-dev --sing
 git clone https://github.com/alliedmodders/metamod-source --branch 1.10-dev --single-branch mmsource-central;
 git clone https://github.com/alliedmodders/hl2sdk.git --branch l4d2 --single-branch hl2sdk-l4d2;
 
+#TODO: Add check for L4D2 folder, give error if not found
 mkdir -p srcds/left4dead2/bin;
 cp -R /home/ogpuser/OGP_User_Files/m_l4d2/bin/* srcds/left4dead2/bin/
 
@@ -36,7 +38,7 @@ make playerslots;
 
 cd ../;
 
-cp left4downtown2/Release/left4downtown.ext.2.l4d2.so addons/sourcemod/extensions;
+cp left4downtown2/Release.playerslots/left4downtown.ext.2.l4d2.so addons/sourcemod/extensions;
 cp left4downtown2/scripting/include/* addons/sourcemod/scripting/include;
 cp left4downtown2/gamedata/left4downtown.l4d2.txt addons/sourcemod/gamedata;
 
