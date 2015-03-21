@@ -36,7 +36,7 @@ bashtrap()
 {
         echo "shutdown"
         screen -S $SESSION_NAME -X stuff 'save save/openttd'`echo -ne '\015'`
-        screen -S $SESSION_NAME -X stuff 'quit'`echo -ne '\015'`
+        screen -S $SESSION_NAME -X stuff 'exit'`echo -ne '\015'`
 }
 
 while :                
