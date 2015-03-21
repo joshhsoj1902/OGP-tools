@@ -1,0 +1,99 @@
+<game_config>
+  <game_key>openttd_linux32</game_key>
+  <protocol>lgsl</protocol>
+  <lgsl_query_name>openttd</lgsl_query_name>
+  <game_name>OpenTTD</game_name>
+  <server_exec_name>openttd_launcher.sh</server_exec_name>
+  <cli_template>-D %IP%:%PORT% -c openttd.cfg -g save/openttd.sav </cli_template>
+  <cli_params>
+    <cli_param id="IP" cli_string="" />
+    <cli_param id="PORT" cli_string="" />
+  </cli_params>
+  <control_protocol>rcon</control_protocol>
+  <mods>
+    <mod key="default">
+      <name>none</name>
+    </mod>
+  </mods>
+  <replace_texts>
+    <text key="control_password">
+      <default>rcon_password = .*</default>
+      <var>rcon_password = </var>
+      <options></options>
+      <filepath>openttd.cfg</filepath>
+    </text>
+    <text key="home_name">
+      <default>server_name = .*</default>
+      <var>server_name = </var>
+      <options></options>
+      <filepath>openttd.cfg</filepath>
+    </text>
+    <text key="max_players">
+      <default>max_clients = .*</default>
+      <var>max_clients = </var>
+      <options></options>
+      <filepath>openttd.cfg</filepath>
+    </text>
+
+  </replace_texts>
+  <server_params>
+    <!--This should always be the default-->
+    <param id="PASS" key="-p" type="text">
+      <caption>Server Psssword</caption>
+      <desc>Password required to join the server</desc>
+    </param>
+  </server_params>
+  <custom_fields>
+    <field key="MapX" type="select">
+      <option value="6">64</option>
+      <option value="7">128</option>
+      <option value="8">256</option>
+      <option value="9">512</option>
+      <option value="10">1028</option>
+      <option value="11">2048</option>
+      <option value="12">4096</option>
+      <default>map_x = .*</default>
+      <default_value>8</default_value>
+      <var>map_x = </var>
+      <filepath>openttd.cfg</filepath>
+      <options></options>
+      <desc>X-Axis Size</desc>
+    </field>
+    <field key="MapY" type="select">
+      <option value="6">64</option>
+      <option value="7">128</option>
+      <option value="8">256</option>
+      <option value="9">512</option>
+      <option value="10">1028</option>
+      <option value="11">2048</option>
+      <option value="12">4096</option>
+      <default>map_y = .*</default>
+      <default_value>8</default_value>
+      <var>map_y = </var>
+      <filepath>openttd.cfg</filepath>
+      <options></options>
+      <desc>Y-Axis Size</desc>
+    </field>
+    <field key="MinActiveClients" type="select">
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <default>min_active_clients = .*</default>
+      <default_value>1</default_value>
+      <var>min_active_clients = </var>
+      <filepath>openttd.cfg</filepath>
+      <options></options>
+      <desc>Minimum # of players for the game to unpause</desc>
+    </field>
+
+
+  </custom_fields>
+</game_config>
