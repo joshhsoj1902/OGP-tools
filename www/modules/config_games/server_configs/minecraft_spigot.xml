@@ -83,8 +83,8 @@
       <caption>Start RAM</caption>
       <desc>How much memory? for example: 1024M</desc>
     </param>
-	<param id="XMX" key="-Xmx" type="text">
-	  <option>ns</option>
+    <param id="XMX" key="-Xmx" type="text">
+      <option>ns</option>
       <default>1024M</default>
       <caption>Max RAM</caption>
       <desc>How much memory? for example: 1024M</desc>
@@ -100,6 +100,300 @@
       <filepath>eula.txt</filepath>
       <options></options>
       <desc>Do you agree to the Eula? https://account.mojang.com/documents/minecraft_eula</desc>
+    </field>
+    <field key="Difficulty" type="select">
+      <option value="0">Peaceful</option>
+      <option value="1">Easy</option>
+      <option value="2">Normal</option>
+      <option value="3">Hard</option>
+      <default>difficulty=.*</default>
+      <default_value>1</default_value>
+      <var>difficulty=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="Hardcore" type="select">
+      <option value="true">True</option>
+      <option value="false">False</option>
+      <default>hardcore=.*</default>
+      <default_value>false</default_value>
+      <var>hardcore=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="PVP" type="select">
+      <option value="true">True</option>
+      <option value="false">False</option>
+      <default>pvp=.*</default>
+      <default_value>true</default_value>
+      <var>pvp=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="View Distance" type="select">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+      <option value="13">13</option>
+      <option value="14">14</option>
+      <option value="15">15</option>
+      <default>view-distance=.*</default>
+      <default_value>10</default_value>
+      <var>view-distance=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="Allow Flight" type="select">
+      <option value="true">True</option>
+      <option value="false">False</option>
+      <default>allow-flight=.*</default>
+      <default_value>false</default_value>
+      <var>allow-flight=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="Nether" type="select">
+      <option value="true">True</option>
+      <option value="false">False</option>
+      <default>allow-nether=.*</default>
+      <default_value>true</default_value>
+      <var>allow-nether=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="Announce Player Achievements" type="select">
+      <option value="true">True</option>
+      <option value="false">False</option>
+      <default>announce-player-achievements=.*</default>
+      <default_value>true</default_value>
+      <var>announce-player-achievements=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="Enable Command Block" type="select">
+      <option value="true">True</option>
+      <option value="false">False</option>
+      <default>enable-command-block=.*</default>
+      <default_value>false</default_value>
+      <var>enable-command-block=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="GameMode" type="select">
+      <option value="0">Survival</option>
+      <option value="1">Creative</option>
+      <option value="2">Adventure</option>
+      <option value="3">Spectator</option>
+      <default>gamemode=.*</default>
+      <default_value>false</default_value>
+      <var>gamemode=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="Force GameMode" type="select">
+      <option value="true">True</option>
+      <option value="false">False</option>
+      <default>force-gamemode=.*</default>
+      <default_value>false</default_value>
+      <var>force-gamemode=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc>Force players to join server in default gamemode</desc>
+    </field>
+    <field key="Generate Structures" type="select">
+      <option value="true">True</option>
+      <option value="false">False</option>
+      <default>generate-structures=.*</default>
+      <default_value>true</default_value>
+      <var>generate-structures=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="Level Name" type="text">
+      <default>level-name=.*</default>
+      <default_value>world</default_value>
+      <var>level-name=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="Level Seed" type="text">
+      <default>level-seed=.*</default>
+      <default_value></default_value>
+      <var>level-seed=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="Level Type" type="select">
+      <option value="DEFAULT">DEFAULT</option>
+      <option value="FLAT">FLAT</option>
+      <option value="LARGEBIOMES">LARGEBIOMES </option>
+      <option value="AMPLIFIED">AMPLIFIED </option>
+      <option value="CUSTOMIZED">CUSTOMIZED </option>
+      <default>level-type=.*</default>
+      <default_value>DEFAULT</default_value>
+      <var>level-type=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="Generator Settings" type="text">
+      <default>generator-settings=.*</default>
+      <default_value></default_value>
+      <var>generator-settings=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc>http://minecraft.gamepedia.com/Customized</desc>
+    </field>
+    <field key="Max Build Height" type="text">
+      <default>max-build-height=.*</default>
+      <default_value>256</default_value>
+      <var>max-build-height=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="Max World Size" type="text">
+      <default>max-world-size=.*</default>
+      <default_value>29999984</default_value>
+      <var>max-world-size=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="Network Compression Threshold" type="text">
+      <default>network-compression-threshold=.*</default>
+      <default_value>256</default_value>
+      <var>network-compression-threshold=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="Player Authentication" type="select">
+      <option value="true">True</option>
+      <option value="false">False</option>
+      <default>online-mode=.*</default>
+      <default_value>true</default_value>
+      <var>online-mode=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc>Authenticate players against Mojang's servers?</desc>
+    </field>
+    <field key="Network Compression Threshold" type="select">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <default>op-permission-level=.*</default>
+      <default_value>4</default_value>
+      <var>op-permission-level=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="Player Idle Timeout" type="text">
+      <default>player-idle-timeout=.*</default>
+      <default_value>0</default_value>
+      <var>player-idle-timeout=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="Resource Pack" type="text">
+      <default>resource-pack=.*</default>
+      <default_value></default_value>
+      <var>resource-pack=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="Resource Pack Hash" type="text">
+      <default>resource-pack-hash=.*</default>
+      <default_value></default_value>
+      <var>resource-pack-hash=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="Snooper" type="select">
+      <option value="true">True</option>
+      <option value="false">False</option>
+      <default>snooper-enabled=.*</default>
+      <default_value>true</default_value>
+      <var>snooper-enabled=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc>Send stats to Mojang</desc>
+    </field>
+    <field key="Spawn Animals" type="select">
+      <option value="true">True</option>
+      <option value="false">False</option>
+      <default>spawn-animals=.*</default>
+      <default_value>true</default_value>
+      <var>spawn-animals=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="Spawn Monsters" type="select">
+      <option value="true">True</option>
+      <option value="false">False</option>
+      <default>spawn-monsters=.*</default>
+      <default_value>true</default_value>
+      <var>spawn-monsters=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="Spawn NPCs" type="select">
+      <option value="true">True</option>
+      <option value="false">False</option>
+      <default>spawn-npcs=.*</default>
+      <default_value>true</default_value>
+      <var>spawn-npcs=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
+    </field>
+    <field key="Use Native Transport" type="select">
+      <option value="true">True</option>
+      <option value="false">False</option>
+      <default>use-native-transport=.*</default>
+      <default_value>true</default_value>
+      <var>use-native-transport=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc>Linux server performance improvements</desc>
+    </field>
+    <field key="Enable White List" type="select">
+      <option value="true">True</option>
+      <option value="false">False</option>
+      <default>white-list=.*</default>
+      <default_value>false</default_value>
+      <var>white-list=</var>
+      <filepath>server.properties</filepath>
+      <options></options>
+      <desc></desc>
     </field>
 
   </custom_fields>
