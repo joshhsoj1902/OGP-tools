@@ -13,7 +13,8 @@ echo "Server Configs Updated"
 echo "======================"
 
 #Temporary internal rsync server
-echo "192.168.0.103" > /var/www/modules/gamemanager/rsync_sites_local.list
+echo "192.168.0.103|Local Rsync Server" > /var/www/modules/gamemanager/rsync_sites_local.list
+truncate -s 0 /var/www/modules/gamemanager/rsync_sites.list;
 
 #It would be better if there was some way to know which games were added by me.
 #this method doesn't support removing games later. It can only add games and 
@@ -28,6 +29,13 @@ done <rsync_games.txt
 echo "============="
 echo "Rsync Updated"
 echo "============="
+
+./ogp_agent_pl_patch.sh;
+echo "Agent should be restarted"
+
+echo "==========="
+echo "OGP Patched"
+echo "==========="
 
 echo "===="
 echo "Done"
