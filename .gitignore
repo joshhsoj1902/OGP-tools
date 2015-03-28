@@ -5,3 +5,4 @@ l4d2/src.tar.gz
 l4d2/working/*
 minecraft/working/*
 rsync/*/working/*
+rsync/*/done/*

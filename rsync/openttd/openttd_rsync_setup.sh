@@ -12,6 +12,7 @@ OPENGFXVERSION=0.5.0;
 OPENSFXVERSION=0.2.3;
 OPENMSXVERSION=0.3.1;
 
+OUTPUTDIR=done;
 WORKINGDIR=working;
 GAMENAME=openttd;
 PLATFORM=linux;
@@ -111,8 +112,11 @@ mv -f $BASEDIR/baseset/openmsx-* $BASEDIR/baseset/openmsx;
 rm -r $BASEDIR/baseset/openmsx-*
 
 
-chown -R 500:users $WORKINGDIR;
+mkdir $OUTPUTDIR;
 
+mv $WORKINGDIR/openttd $OUTPUTDIR
+ 
+chown -R 500:users $OUTPUTDIR;
 
 echo ""
 echo "======================================================================="

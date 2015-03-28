@@ -17,7 +17,15 @@ function update_game(){
 }
 
 function install_game(){
-  cp -rp $1/working/* $RSYNCDIR
+  cp -rp $1/done/* $RSYNCDIR
+
+  if [ "$?" -ne "0" ]; then
+    echo "***********************"
+    echo $1" INSTALL FAILED"
+    echo "***********************"
+    sleep 5
+  fi
+
 }
 
 
