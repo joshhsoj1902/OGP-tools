@@ -26,6 +26,7 @@ function install_game(){
     sleep 5
   fi
 
+  echo $1" Installed to "$RSYNCDIR
 }
 
 
