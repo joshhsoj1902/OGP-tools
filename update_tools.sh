@@ -22,7 +22,7 @@ truncate -s 0 /var/www/modules/gamemanager/rsync_sites.list;
 while read p; do
   sed -i '/'$p'/d' /var/www/modules/gamemanager/rsync.list
   echo $p >> /var/www/modules/gamemanager/rsync.list
-done <rsync_games.txt
+done <rsync/rsync_supported_games.txt
 
 
 
