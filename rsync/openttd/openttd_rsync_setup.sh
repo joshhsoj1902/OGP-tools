@@ -48,9 +48,9 @@ fi
 cp $WORKINGDIR/openttd*.tar.gz $BASEDIR/;
 tar -zxvf $BASEDIR/openttd*.tar.gz -C $BASEDIR;
 rm $BASEDIR/openttd*.tar.gz;
-mv $BASEDIR/openttd-* $BASEDIR/openttd-dir; # Looks like this:  openttd-1.4.4-linux-generic-amd64
-mv $BASEDIR/openttd-dir/* $BASEDIR/;
-rmdir $BASEDIR/openttd-dir*;
+mv -f $BASEDIR/openttd-* $BASEDIR/openttd_dir; # Looks like this:  openttd-1.4.4-linux-generic-amd64
+mv -f $BASEDIR/openttd_dir/* $BASEDIR/;
+rm -r $BASEDIR/openttd_dir*;
 
 
 #cd baseset;
@@ -68,10 +68,11 @@ if [ "$?" -ne "0" ]; then
 fi
 
 cp $WORKINGDIR/opengfx*.zip $BASEDIR/baseset/;
-unzip $BASEDIR/baseset/opengfx*.zip -d $BASEDIR/baseset/;
+unzip -o $BASEDIR/baseset/opengfx*.zip -d $BASEDIR/baseset/;
 tar -xvf $BASEDIR/baseset/opengfx*.tar -C $BASEDIR/baseset/; 
 rm $BASEDIR/baseset/opengfx*.zip $BASEDIR/baseset/opengfx*.tar;
-mv $BASEDIR/baseset/opengfx* $BASEDIR/baseset/opengfx;
+mv -f $BASEDIR/baseset/opengfx-* $BASEDIR/baseset/opengfx;
+rm -r $BASEDIR/baseset/opengfx-*
 
 #########
 #OPENSFX#
@@ -86,9 +87,10 @@ if [ "$?" -ne "0" ]; then
 fi
 
 cp $WORKINGDIR/opensfx*.zip  $BASEDIR/baseset/;
-unzip $BASEDIR/baseset/opensfx*.zip -d $BASEDIR/baseset/;
+unzip -o $BASEDIR/baseset/opensfx*.zip -d $BASEDIR/baseset/;
 rm $BASEDIR/baseset/opensfx*.zip;
-mv $BASEDIR/baseset/opensfx* $BASEDIR/baseset/opensfx;
+mv -f $BASEDIR/baseset/opensfx-* $BASEDIR/baseset/opensfx;
+rm -r $BASEDIR/baseset/opensfx-*
 
 #########
 #OPENMSX#
@@ -103,9 +105,10 @@ if [ "$?" -ne "0" ]; then
 fi
 
 cp $WORKINGDIR/openmsx*.zip $BASEDIR/baseset/;
-unzip $BASEDIR/baseset/openmsx*.zip -d $BASEDIR/baseset/;
+unzip -o $BASEDIR/baseset/openmsx*.zip -d $BASEDIR/baseset/;
 rm $BASEDIR/baseset/openmsx*.zip;
-mv $BASEDIR/baseset/openmsx* $BASEDIR/baseset/openmsx;
+mv -f $BASEDIR/baseset/openmsx-* $BASEDIR/baseset/openmsx;
+rm -r $BASEDIR/baseset/openmsx-*
 
 
 chown -R 500:users $WORKINGDIR;
