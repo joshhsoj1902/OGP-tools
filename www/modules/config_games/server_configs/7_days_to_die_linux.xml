@@ -21,6 +21,12 @@
     </mod>
   </mods>
   <replace_texts>
+    <!--<text key="true">
+      <default>((.*)(property name="SaveGameFolder")(.*)</default>
+      <var><property name="SaveGameFolder"      value="/home/ogpuser/OGP_User_Files/24/Saves" ></var>
+      <filepath>serverconfig.xml</filepath>
+      <options>key-regex</options>
+    </text>-->
     <text key="port">
       <default>property</default>
       <var>ServerPort</var>
@@ -64,8 +70,8 @@
       <options>tagValueByName</options>
     </text>
     <text key="home_path">
-      <default>(property\s+name=&quot;SaveGameFolder&quot;\s+value=&quot;)(.*)(&quot;)</default>
-      <var>${1}%key%/Saves${3}</var>
+      <default>(.*)(property\s+name=&quot;SaveGameFolder&quot;\s+value=&quot;)(.*)(&quot;)(.*&gt;)(.*&lt;.*&gt;.*)</default>
+      <var>  &lt;${2}%key%/Saves${4}/&gt;${6}</var>
       <filepath>serverconfig.xml</filepath>
       <options>key-regex</options>
     </text>
@@ -438,13 +444,15 @@ nohup $SERVER_CMD &amp;
 trap shutdown EXIT
 shutdown()
 {
-  ( echo open ${IP} ${TPORT}
-  sleep 1
-  echo $PASSWORD
-  sleep 1
-  echo shutdown
-  sleep 1
-  echo exit ) | telnet
+  echo "$PASSWORD"    &gt; nc_commands.txt
+  echo "sleep 1"      &gt;&gt; nc_commands.txt
+  echo "shutdown"     &gt;&gt; nc_commands.txt
+  echo "exit"         &gt;&gt; nc_commands.txt
+
+  nc ${IP} ${TPORT} &lt; nc_commands.txt
+  rm nc_commands.txt
+
+  exit 0
 }
 
 while :
