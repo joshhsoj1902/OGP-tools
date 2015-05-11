@@ -30,7 +30,7 @@ echo "logaddress_add localhost:27500" >> server.cfg
 
 """
 
-insert_common.insert_addon(
+insert_common.update_addon(
     "HLX stats client [1.6.19]",
     "https://bitbucket.org/Maverick_of_UC/hlstatsx-community-edition/downloads/hlxce_1_6_19.tar.gz",
     "left4dead2/addons/hlx",

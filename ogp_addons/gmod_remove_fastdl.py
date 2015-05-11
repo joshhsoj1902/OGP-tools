@@ -24,7 +24,7 @@ rm -rf $FILEPATH
 
 """
 
-insert_common.insert_addon(
+insert_common.update_addon(
     "Remove FastDL",
     "http://localhost/images/log.png",
     "",

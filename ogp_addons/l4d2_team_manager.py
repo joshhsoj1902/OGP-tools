@@ -12,7 +12,7 @@ wget -O l4d2scores.txt 'https://forums.alliedmods.net/attachment.php?attachmenti
 
 """
 
-insert_common.insert_addon(
+insert_common.update_addon(
     "Team Manager [1.3.0]",
     "https://forums.alliedmods.net/attachment.php?attachmentid=57824&d=1324205564",
     "left4dead2/addons/sourcemod/plugins",

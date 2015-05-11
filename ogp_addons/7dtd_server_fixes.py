@@ -13,7 +13,7 @@ rm server_fixes.tar.gz
 echo '7DaysToDie_Data/Managed/'
 """
 
-insert_common.insert_addon(
+insert_common.update_addon(
     "Allocs Server Fixes",
     "https://www.google.ca/images/nav_logo195.png",
     "",

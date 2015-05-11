@@ -11,7 +11,7 @@ cd %home_path%/left4dead2/cfg/sourcemod
 wget -O l4d_superversus.cfg 'https://forums.alliedmods.net/attachment.php?attachmentid=54296&d=1259500245'
 """
 
-insert_common.insert_addon(
+insert_common.update_addon(
     "SuperVersus [1.5.4]",
     "http://www.sourcemod.net/vbcompiler.php?file_id=54755",
     "left4dead2/addons/sourcemod/plugins",

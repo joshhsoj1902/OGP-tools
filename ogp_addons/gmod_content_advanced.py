@@ -41,7 +41,7 @@ wget -O mount.cfg http://localhost/downloads/gmod/mount.cfg
 
 """
 
-insert_common.insert_addon(
+insert_common.update_addon(
     "Advanced FREE Content installation",
     "http://localhost/downloads/gmod/mountdepots.txt",
     "garrysmod/cfg",

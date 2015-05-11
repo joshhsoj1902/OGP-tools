@@ -12,7 +12,7 @@ rm -f ulx-v3_62.zip
 rm -f ULib-v2_52.zip
 """
 
-insert_common.insert_addon(
+insert_common.update_addon(
     "ULib [2.52] + ULX [3.62]",
     "http://ulyssesmod.net/archive/ULib/ULib-v2_52.zip",
     "garrysmod/addons",

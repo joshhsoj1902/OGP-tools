@@ -54,7 +54,7 @@ cp -rp $HOMEPATH/resource $FILEPATH
 
 """
 
-insert_common.insert_addon(
+insert_common.update_addon(
     "Install & Update FastDL",
     "http://localhost/images/log.png",
     "",
