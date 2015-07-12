@@ -57,7 +57,7 @@ echo "sv_force_unreserved 1" >> server.cfg
 
 """
 
-insert_common.insert_addon(
+insert_common.update_addon(
     "8 Player Co-op",
     "http://localhost/downloads/left4downtown2/left4downtown2.tar.gz",
     "left4dead2",

@@ -15,7 +15,7 @@ echo "}">>%home_path%/left4dead2/addons/metamod.vdf
 rm -f %home_path%/left4dead2/addons/metamod/sourcemod.vdf
 echo "sm addons/sourcemod/bin/sourcemod_mm">>%home_path%/left4dead2/addons/metamod/metaplugins.ini"""
 
-insert_common.insert_addon(
+insert_common.update_addon(
     "Metamod Source [1.10.4] + Sourcemod [1.6.3]",
     "http://cdn.probablyaserver.com/sourcemod/sourcemod-1.6.3-linux.tar.gz",
     "left4dead2",
