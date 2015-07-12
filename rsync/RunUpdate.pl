@@ -6,8 +6,7 @@ package RunUpdate;
 use UpdateCommon qw(parse_game copyFolder setOwner);
 
 my $GAME_LIST_FILE = "rsync_game_list.load";
-#my $RSYNC_DIR = "/home/ogpuser/games"
-my $RSYNC_DIR = "/tmp/rsync";
+my $RSYNC_DIR = "/home/ogpuser/games";
 my $RSYNC_USER  = '500';
 my $RSYNC_GROUP = 'users';
 
