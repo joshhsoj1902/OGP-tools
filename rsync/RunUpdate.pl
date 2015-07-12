@@ -66,6 +66,7 @@ sub processGames {
     }
     if ((uc $gameName eq uc $parsedGameName) || (uc $gameName eq "ALL"))
     {
+      print "Fround $gameName Processing $parsedGameMod \n";
       if ($runMode eq "U" )
       {
         &updateGame($parsedGameName, $parsedGameMod, $parsedVersion, $parsedPlatform, $parsedDownloadUrl);
@@ -78,7 +79,7 @@ sub processGames {
 
     $i +=1;
   }
-  if ($gameFound = 0)
+  if ($gameFound == 0)
   {
     die "Game $gameName not found in $GAME_LIST_FILE";
   } 
@@ -93,28 +94,40 @@ sub updateGame {
   my $platform    = $_[3];
   my $downloadurl = $_[4];
 
+  chomp($gamename);
+  chomp($gamemod);
+
   print "=================\n";
-  print "$gamename UPDATING \n";
+  print "$gamename $gamemod UPDATING \n";
   #print $gamename;
   #print $gamemod;
   #print $version;
   #print $platform;
   #print $downloadurl;
 
-  chomp($gamename);
 
   if (-d $gamename) {
-    @list = <$gamename/*RsyncSetup.pl>;
+    @list = <$gamename/*$gamemod*RsyncSetup.pl>;
 
-    my $gameScript = "$list[0]\n";
+    my $listSize = @list;
+    if ($listSize == 0){
+      print "No Scripts found matching $gamename/*$gamemod*RsyncSetup.pl \n";
+    }
 
-    chomp($gameScript);
-    chomp($platform);
-    chomp($downloadurl);
+    foreach (@list) {
+      my $gameScript = "$_";
+      # my $gameScript = "$list[0]\n";
 
-    local @ARGV = ($gamename, $platform, $downloadurl);
+      print "Running Script $gameScript \n";
 
-    system($^X, $gameScript, @ARGV);
+      chomp($gameScript);
+      chomp($platform);
+      chomp($downloadurl);
+
+      local @ARGV = ($gamename, $platform, $downloadurl);
+
+      system($^X, $gameScript, @ARGV);
+    }
   }else {
     print "\n\nNo folder found for \'$gamename\', Skipping update \n\n\n";
   }

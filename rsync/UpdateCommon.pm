@@ -92,7 +92,7 @@ sub download_file {
   my $response = $ua->get($downloadurl);
 
   if ($response->code == 304) {
-      print "No changes.\n";
+      print "Skipping Download, No changes to $downloadurl since $lastChecked.\n";
   } elsif ($response->is_success) {
       print "Downloading File.\n";
       open my $outFile, '>', $outFileName or die "Failed opening $outFileName: $!";

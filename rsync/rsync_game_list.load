@@ -1,2 +1,2 @@
-terraria|tshock|4.3.3|linux|https://github.com/NyxStudios/TShock/releases/download/v4.3.3/tshock_4.3.3-pre1.zip|
-minecraft|spigot|latest|linux|https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar|
+terraria|TShock|4.3.3|linux|https://github.com/NyxStudios/TShock/releases/download/v4.3.3/tshock_4.3.3-pre1.zip|
+minecraft|Spigot|latest|linux|https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar|
