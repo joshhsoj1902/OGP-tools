@@ -93,6 +93,8 @@ sub updateGame {
   my $platform    = $_[3];
   my $downloadurl = $_[4];
 
+  print "=================\n";
+  print "$gamename UPDATING \n";
   #print $gamename;
   #print $gamemod;
   #print $version;
@@ -117,6 +119,9 @@ sub updateGame {
     print "\n\nNo folder found for \'$gamename\', Skipping update \n\n\n";
   }
 
+  print "Done \n";
+  print "=================\n";
+
 }
 
 sub installGame {
@@ -129,6 +134,9 @@ sub installGame {
       &setOwner("$RSYNC_USER", "$RSYNC_GROUP","$gameName/done");
       &copyFolder("$gameName/done", "$RSYNC_DIR");
       &setOwner("$RSYNC_USER", "$RSYNC_GROUP","$RSYNC_DIR/$gameName");
+      print "=================\n";
+      print "$gameName INSTALLED \n";
+      print "=================\n";
     }else {
       print "\n\nNo folder found for \'$gamename\', Skipping Install \n\n\n";
     }

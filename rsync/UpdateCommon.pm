@@ -14,6 +14,7 @@ $ENV{PERL_LWP_SSL_VERIFY_HOSTNAME} = 0;
 use Archive::Extract;
 use File::Copy qw(copy);
 use File::Copy::Recursive qw(dircopy);
+use File::Basename;
 
 use parent 'Exporter';
 our @EXPORT_OK = qw(parse_game download_file unArchiveTo copyFile copyFolder prepGameFolder setOwner);
@@ -51,7 +52,7 @@ sub parse_game {
       $version     = "$fields[2]\n";
       $platform    = "$fields[3]\n";
       $downloadurl = "$fields[4]\n";
-      #TODO: Exit while
+      last;
     }
     $i = $i + 1;
   }
@@ -115,12 +116,21 @@ sub unArchiveTo {
 sub copyFile {
 
   my ($sourceFile)      = $_[0];
-  my ($sourceDir)       = $_[1];
-  my ($destinationDir)  = $_[2];
-  my ($filePermissions) = $_[3];
+  my ($destinationDir)  = $_[1];
+  my ($filePermissions) = $_[2];
 
-  copy "$sourceDir/$sourceFile", "$destinationDir";
-  chmod $filePermissions, "$destinationDir/$sourceFile";
+  @files = glob("$sourceFile");
+
+  foreach (@files) {
+    my $baseName = basename("$_");
+    copy("$_","$destinationDir/.");
+
+    if ($filePermissions ne ""){
+      chmod $filePermissions, "$destinationDir/$baseName";
+    }
+  }
+  #copy "$sourceDir/$sourceFile", "$destinationDir";
+  #chmod $filePermissions, "$destinationDir/$sourceFile";
 
 }
 
@@ -129,7 +139,7 @@ sub copyFolder {
   my ($sourceDir)       = $_[0];
   my ($destinationDir)  = $_[1];
 
-  dircopy ("$sourceDir", "$destinationDir");
+  dircopy("$sourceDir", "$destinationDir");
   
 }
 
@@ -143,7 +153,7 @@ sub setOwner {
   #my $gid = getgrnam $groupName;
   #chown $uid, $gid, $fileName;
   my $systemCommand = "/bin/chown -R $userName:$groupName $fileName";
-  system($systemCommand);
+  my $exitStatus = system($systemCommand);
 
 }
 

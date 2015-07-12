@@ -20,7 +20,7 @@ my $platformdir = "$workingdir/$gamename/$platform/";
 &download_file("$downloadurl", "$workingdir/$gamename.zip");
 &unArchiveTo("$workingdir/$gamename.zip","$platformdir");
 
-&copyFile("terraria_tshock_launcher.sh",$gamename,$platformdir,0766);
+&copyFile("$gamename/terraria_tshock_launcher.sh",$platformdir,0766);
 &make_path("$platformdir/Worlds");
 
 &copyFolder("$workingdir/$gamename",$outputdir);
