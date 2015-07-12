@@ -20,7 +20,9 @@ my $platformdir = "$workingdir/$gamename/$platform/";
 
 &download_file("$downloadurl", "$workingdir/BuildTools.jar");
 
+print "\n\n======================\n";
 print "This may take awhile...\n";
+print "\n=======================\n";
 sleep 5;
 
 my $systemCommand = "cd $workingdir; java -jar BuildTools.jar";
