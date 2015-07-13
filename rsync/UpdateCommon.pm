@@ -13,11 +13,11 @@ require Date::Parse;
 $ENV{PERL_LWP_SSL_VERIFY_HOSTNAME} = 0;
 use Archive::Extract;
 use File::Copy qw(copy);
-use File::Copy::Recursive qw(dircopy);
+use File::Copy::Recursive qw(dircopy dirmove);
 use File::Basename;
 
 use parent 'Exporter';
-our @EXPORT_OK = qw(parse_game download_file unArchiveTo copyFile copyFolder prepGameFolder setOwner);
+our @EXPORT_OK = qw(parse_game download_file unArchiveTo copyFile copyFolder moveFolder prepGameFolder setOwner);
 
 sub parse_game {
 
@@ -86,6 +86,7 @@ sub download_file {
     $lastChecked = '2000-01-01';
   }
 
+  print "Asking if file changed...\n";
   my $ua = LWP::UserAgent->new;
   $ua->default_header('If-Modified-Since' => HTTP::Date::time2str(Date::Parse::str2time($lastChecked)));
 
@@ -140,7 +141,15 @@ sub copyFolder {
   my ($destinationDir)  = $_[1];
 
   dircopy("$sourceDir", "$destinationDir");
-  
+}
+
+sub moveFolder {
+
+  my ($sourceDir)       = $_[0];
+  my ($destinationDir)  = $_[1];
+
+  dirmove("$sourceDir","$destinationDir")
+
 }
 
 sub setOwner {

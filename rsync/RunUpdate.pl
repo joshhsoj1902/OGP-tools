@@ -66,7 +66,7 @@ sub processGames {
     }
     if ((uc $gameName eq uc $parsedGameName) || (uc $gameName eq "ALL"))
     {
-      print "Fround $gameName Processing $parsedGameMod \n";
+      print "Found $gameName Processing $parsedGameMod \n";
       if ($runMode eq "U" )
       {
         &updateGame($parsedGameName, $parsedGameMod, $parsedVersion, $parsedPlatform, $parsedDownloadUrl);
@@ -107,7 +107,7 @@ sub updateGame {
 
 
   if (-d $gamename) {
-    @list = <$gamename/*$gamemod*RsyncSetup.pl>;
+    @list = <$gamename/*${gamemod}RsyncSetup.pl>;
 
     my $listSize = @list;
     if ($listSize == 0){
