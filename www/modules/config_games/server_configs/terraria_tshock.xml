@@ -21,12 +21,12 @@
     </mod>
   </mods>
   <replace_texts>
-    <text key="control_password">
+    <!--<text key="control_password">
       <default>("RconPassword"\s*:\s*")(.*)(",)</default>
       <var>"RconPassword": "%key%",</var>
       <options>key-regex</options>
       <filepath>tshock/config.json</filepath>
-    </text>
+    </text>-->
     <text key="home_name">
       <default>("ServerName"\s*:\s*")(.*)(",)</default>
       <var>"ServerName": "%key%",</var>
@@ -39,13 +39,13 @@
       <filepath>tshock/config.json</filepath>
       <options>key-regex</options>
     </text>
-    <!--Rcon not actuallly implemented-->
+    <!--Rcon not actuallly implemented
     <text key="port">
       <default>("RconPort"\s*:\s*)(.*)(,)</default>
       <var>"RconPort": %key%,</var>
       <filepath>tshock/config.json</filepath>
       <options>key-regex</options>
-    </text>
+    </text>-->
 
     <text key="true">
       <default>("RestApiEnabled"\s*:\s*)(.*)(,)</default>
