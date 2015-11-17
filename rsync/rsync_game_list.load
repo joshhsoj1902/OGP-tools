@@ -1,0 +1,6 @@
+terraria|TShock|4.3.3|linux|https://github.com/NyxStudios/TShock/releases/download/v4.3.3/tshock_4.3.3-pre1.zip|
+minecraft|Spigot|latest|linux|https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar|
+openttd|OpenTTD|1.5.1|linux|http://binaries.openttd.org/releases/1.5.1/openttd-1.5.1-linux-generic-amd64.tar.gz|
+openttd|OpenGFX|0.5.0|linux|http://binaries.openttd.org/extra/opengfx/0.5.0/opengfx-0.5.0-all.zip|
+openttd|OpenSFX|0.2.3|linux|http://binaries.openttd.org/extra/opensfx/0.2.3/opensfx-0.2.3-all.zip|
+openttd|OpenMSX|0.3.1|linux|http://binaries.openttd.org/extra/openmsx/0.3.1/openmsx-0.3.1-all.zip|
